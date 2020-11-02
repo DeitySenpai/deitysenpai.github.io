@@ -47,7 +47,7 @@ code {
 }
 
 
-.logo:hover .title {
+.title:hover {
 	animation: anaglyph 5s infinite;
 }
 
@@ -77,14 +77,14 @@ code {
 	width: 100px;
 	color: white;
 	top: -3px;
-	box-shadow: 1px 3px 0 black;
+	box-shadow: 2px 3px 0 black;
 	position: relative;
 	text-decoration: none;
 }
 
 .link:hover{	
 	top: 0;
-	right: -1px;
+	right: -2px;
 	box-shadow: none;
 }
 
