@@ -102,12 +102,18 @@ code {
     border-left: none;
     margin: 0;
   	padding: 0;
+  	height: auto;
+  	margin-bottom: 10px;
   }
   .title{
   	text-decoration: underline;
+  	font-size: 2rem;
   }
   .avatar{
   	margin: 0;
+  }
+  .footer{
+  	margin-top: 50px;
   }
 }
 
@@ -115,7 +121,6 @@ code {
 	bottom: 0;
 	position: fixed;
 	font-size: 0.9rem;
-	/*color: black;*/
 	width: 100%;
 	background-color: black;
 	text-align: center;
