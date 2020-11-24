@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: sans-serif;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(wallpaper.png);
+	animation: test 60s infinite;
+	background-size: cover;
+}
+
+@keyframes test{
+	0%{
+		background-position: left bottom;
+	}
+	25%{
+		background-position: center top;
+	}
+	50%{
+		background-position: left center;
+	}
+	75%{
+		background-position: right top;
+	}
+	100%{
+		background-position: left bottom;
+	}
+}
+
+#avatar{
+	background: url(avatar.png);
+	background-size: contain;
+	display: inline;
+	margin-top: 50px;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-top: 25px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.title{
+	background-color: #0c0c0c;
+	width: 600px;
+	height: 100px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.description{
+	background-color: #0c0c0c;
+	color: white;
+	height: 100px;
+	width: 600px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.content{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card{
+	background-color: white;
+	transition: all 1s;
+	min-height: 300px;
+	min-width: 600px;
+	text-align: center;
+}
+
+.logo{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 50px;
+	width: 50px;
+	transition: height .1s, width .1s;
+}
+
+.links{
+	/*display: inline-block;*/
+}
+
+.link{
+	height: 100px;
+	width: 100px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+}
+
+.logo:hover {
+	height: 60px;
+	width: 60px;
+}
+
+#yt{ background-color: #FF0000; }
+#yt-logo{ background-image: url(logo/yt-logo.png); }
+
+#ds{ background-color: #7289da; }
+#ds-logo{ background-image: url(logo/ds-logo.png); }
+
+#vk{ background-color: #597da3; }
+#vk-logo{ background-image: url(logo/vk-logo.png); }
+
+#tw{ background-color: #00acee; }
+#tw-logo{ background-image: url(logo/tw-logo.png); }
+
+#tg{ background-color: #039be5; }
+#tg-logo{ background-image: url(logo/tg-logo.png); }
+
+#gh{ background-color: #0c0c0c; }
+#gh-logo{ background-image: url(logo/gh-logo.png); }
