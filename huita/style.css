@@ -10,7 +10,7 @@ html{
 body{
 	font-family: sans-serif;
 	height: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(wallpaper.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../wallpaper.png);
 	animation: test 60s infinite;
 	background-size: cover;
 }
