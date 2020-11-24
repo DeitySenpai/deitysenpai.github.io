@@ -13,6 +13,7 @@ body{
 	background-size: cover;
 	background-position: left bottom;
 	color: white;
+	height: 100%;
 }
 
 code {
@@ -39,13 +40,7 @@ code {
 }
 
 .logo{
-	border-left: 6px solid white;
-	height: 100px;
-	display: flex;
-	align-items: center;
-	margin-top: 10px;
-	margin-left: 10px;
-	padding-left: 10px; 
+	display: none;
 }
 
 .title {
@@ -59,10 +54,16 @@ code {
 
 .container{
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	height: 100%;
 }
 
 .avatar{
-	margin-top: 10px;
+	margin-top: -25px;
 }
 
 .avatar-image{
@@ -102,10 +103,13 @@ code {
 }
 
 @media only screen and (max-width: 600px) {
+	body{
+		background-position: center center;
+	}
   .logo {
   	display: block;
     text-align: center;
-    border-left: none;
+    border: none;
     margin: 0;
   	padding: 0;
   	height: auto;
