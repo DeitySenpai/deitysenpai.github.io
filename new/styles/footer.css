@@ -1,0 +1,70 @@
+footer {
+	margin-top: 120px;
+	max-width: 100%;
+	min-height: 100px;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	font-size: 1.3em;
+}
+
+.footer-block {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-text {
+	font-size: .6em;
+	margin-top: 5px;
+}
+
+.links {
+	margin-left: auto;
+	order: 2;
+	text-align: right;
+}
+
+.link{
+	height: 2.3em;
+	width: 2.3em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	outline: 1px solid black;
+}
+
+.logo{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 30px;
+	width: 30px;
+	transition: height .1s, width .1s;
+}
+
+.link:hover > .logo {
+	height: 34px;
+	width: 34px;
+}
+
+#yt{ background-color: #FF0000; }
+#yt-logo{ background-image: url(../assets/logo/yt-logo.png); }
+
+#ds{ background-color: #7289da; }
+#ds-logo{ background-image: url(../assets/logo/ds-logo.png); }
+
+#vk{ background-color: #597da3; }
+#vk-logo{ background-image: url(../assets/logo/vk-logo.png); }
+
+#tw{ background-color: #00acee; }
+#tw-logo{ background-image: url(../assets/logo/tw-logo.png); }
+
+#tg{ background-color: #039be5; }
+#tg-logo{ background-image: url(../assets/logo/tg-logo.png); }
+
+#gh{ background-color: #0c0c0c; }
+#gh-logo{ background-image: url(../assets/logo/gh-logo.png); }

@@ -95,10 +95,6 @@ code {
 	transition: height .1s, width .1s;
 }
 
-.links{
-	/*display: inline-block;*/
-}
-
 .link{
 	height: 100px;
 	width: 100px;

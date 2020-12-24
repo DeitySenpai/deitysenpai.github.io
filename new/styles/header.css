@@ -1,0 +1,48 @@
+header {
+	height: 1.8em;
+	min-width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	outline: 1px solid black;
+	transition: color .3s, background-color .3s, height .3s;
+}
+
+header .title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	cursor: pointer;
+}
+
+header:hover, .header-scrolled {
+	background-color: black;
+	height: 2.5em;
+}
+
+.navbar {
+	margin-left: auto;
+	order: 2;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;	
+
+	cursor: pointer;
+	user-select: none;
+
+	font-size: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 100%;
+	text-transform: uppercase;
+
+	transition: background-color .1s, color .1s;
+}
+
+.btn:hover {
+	background-color: white;
+	color: black;
+}
