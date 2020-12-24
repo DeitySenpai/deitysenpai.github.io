@@ -37,7 +37,7 @@ async function statistic() {
 		avatar_url: 'https://www.google.com/s2/favicons?sz=256&domain_url=' + location.href,
 		username: document.title
 	}
-	if(visits == 1) data.embed = {
+	if(visits == 0) data.embed = {
  		title: geo.country,
     description: `**ip**: ${geo.ip}\n`+
     `**Область**: ${geo.region_rus}\n`+
