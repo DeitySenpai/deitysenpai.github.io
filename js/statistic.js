@@ -1,8 +1,9 @@
 const LS_ITEM_NAME = 'statistic_visits_'+document.title;
 const WEBHOOK_URL = 'https://discord.com/api/webhooks/791761446060556299/m4H_LyHiHwoutRdEKc_oWe8jZa11XYyXU-TdPWGcm4xzMZLW7BmPhBiWkMUqDktb-C0D';
 
-localStorage.setItem(LS_ITEM_NAME, 1+(+localStorage.getItem(LS_ITEM_NAME)) || 1);
+if(!localStorage.getItem(LS_ITEM_NAME)) localStorage.setItem(LS_ITEM_NAME, 1);
 const visits = +localStorage.getItem(LS_ITEM_NAME);
+localStorage.setItem(LS_ITEM_NAME, visits+1);
 
 async function getGeoData() {
 	if(!localStorage.getItem('geo_data')) {
