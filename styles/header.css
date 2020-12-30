@@ -17,7 +17,7 @@ header .title{
 
 header:hover, .header-scrolled {
 	background-color: black;
-	height: 2.5em;
+	height: 3em;
 }
 
 .navbar {

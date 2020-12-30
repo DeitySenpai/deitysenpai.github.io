@@ -3,7 +3,7 @@
 		font-size: 14px;
 	}
 	header {
-		display: flex;
+		display: none;
 		justify-content: center;
 	}
 	.navbar {
