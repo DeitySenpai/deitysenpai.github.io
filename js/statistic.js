@@ -47,10 +47,8 @@ async function statistic() {
     color: 16382457,
 	}
 	else if(!(localData.visits[document.title] % 10)) data.content = `[UTC${geo.time_zone}] | ${geo.city_rus} | ${geo.ip} в ${localData.visits[document.title]} раз переходит по ссылке "${data.username}". Зачем?`;
-	else return;
-	return executeWebhook(WEBHOOK_URL, data);
+	executeWebhook(WEBHOOK_URL, data);
 }
 
-statistic().then(_ => {
-	localStorage.setItem('statistic', JSON.stringify(localData));
-})
+statistic();
+localStorage.setItem('statistic', JSON.stringify(localData));
