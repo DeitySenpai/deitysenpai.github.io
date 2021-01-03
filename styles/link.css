@@ -31,7 +31,7 @@ h1 {
 	color: white;
 	overflow: hidden;
 	height: 0;
-	animation: enable-btn 4s forwards;
+	animation: enable-btn 6s forwards;
 	text-align: center;
 }
 
