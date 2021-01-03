@@ -51,8 +51,6 @@ async function statistic() {
 	return executeWebhook(WEBHOOK_URL, data);
 }
 
-const redirect = async (url) => {
-	await statistic();
+statistic().then(_ => {
 	localStorage.setItem('statistic', JSON.stringify(localData));
-	window.location.replace(url);
-}
+})
