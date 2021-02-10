@@ -47,7 +47,7 @@ h1:hover {
 .block {
 	width: 1em;
 	height: 4em;
-	background-color: black;
+	background-color: white;
 	margin-top: 14em;
 	animation: float 6s ease-in-out infinite;
 	border-radius: 15px;

@@ -8,7 +8,7 @@
 	transition: min-height .2s;
 	background-size: cover;
 
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/wallpaper.png) no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../assets/wallpaper.webp) no-repeat;
 	background-attachment: fixed;
 	background-position: left bottom;
 }
