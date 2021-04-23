@@ -1,4 +1,7 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
+	html, body {
+		min-width: unset;
+	}
 	main {
 		font-size: 14px;
 	}
@@ -37,8 +40,14 @@
 		margin: unset;
 		margin-top: 30px;
 	}
+	.webstack-container {
+		min-width: unset;
+	}
 	.section {
 		margin-top: 80px;
+	}
+	.subsection {
+		min-width: unset;
 	}
 	.section .title {
 		margin-bottom: 10px; 
@@ -50,8 +59,9 @@
 		border-left: 2px solid #1cfc7e;
 	}
 	#frontend .title { 
-		color: #42eeff; 
-		margin-top: unset; 
+		color: #42eeff;
+		margin-top: unset;
+		 
 	}
 	#backend .title { 
 		color: #f72020; 

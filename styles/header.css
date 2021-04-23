@@ -1,5 +1,5 @@
 header {
-	height: 1.8em;
+	height: 2.5em;
 	min-width: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 	position: fixed;
@@ -16,8 +16,8 @@ header .title{
 }
 
 header:hover, .header-scrolled {
-	background-color: black;
-	height: 3em;
+	background-color: #050505;
+	height: 3.5em;
 }
 
 .navbar {

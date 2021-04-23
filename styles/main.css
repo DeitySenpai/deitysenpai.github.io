@@ -4,6 +4,10 @@
 	transition: all .3s;
 }
 
+html, body {
+	min-width: 1120px;
+}
+
 main {
 	width: 100%;
   height: 100%;

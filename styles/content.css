@@ -4,7 +4,6 @@ content {
 
 .section {
 	width: 100%;
-	min-height: 100px;
 	margin-top: 100px;
 }
 
@@ -17,15 +16,20 @@ content {
 	margin-bottom: 36px;
 }
 
+.webstack-container {
+	min-width: 950px;
+}
+
 .subsection {
-	padding: 16px 8px 16px 32px;
-	background-color: rgba(0,0,0,.2);
 	font-family: Roboto Condensed,Source Sans Pro,Calibri,Arial,sans-serif;
+	background-color: rgba(0,0,0,.2);
+	padding: 16px 8px 16px 32px;
+	min-width: 390px;
 }
 
 .webstack > div {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #frontend { border-left-color: #42eeff; }
